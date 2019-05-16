@@ -56,7 +56,7 @@
             <div class="row">
              <div class="col-md-12">
                 <div class="media">
-                    <a class="navbar-brand">
+                    <a class="navbar-brand" href="/">
 
                         <img src="{% static '/img/logo.gif' %}" alt="IIT Jodhpur" class="logo">
                     </a>
@@ -107,7 +107,7 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
                             <a class="dropdown-item" href="{% url 'main:why-recruit' %}">Why Recruit?</a>
                             <a class="dropdown-item" href="{% url 'main:brochure' %}">Brochure</a>
-                            <a class="dropdown-item" href="{% url 'main:summary' %}">Summary</a>
+                            <a class="dropdown-item" href="{% url 'main:summary' %}">Placement Statistics</a>
                             <a class="dropdown-item" href="{% url 'main:placementProcedure' %}">Placement Procedure</a>
                             <a class="dropdown-item" href="{% url 'main:company_rules' %}">Norms/Guidelines</a>
                             <a class="dropdown-item" href="{% url 'main:past_recruiters' %}">Past Recruiters</a>
@@ -161,23 +161,7 @@
     </nav>
     <br>
 
-<!--
-    <div class="row">
-        {% if not 'register' in request.path and not 'contacts' in request.path %}
-        <div class="col-lg-2" id="past_recruiters">
 
-            <center><h3>Past Recruiters</h3></center>
-            <br>
-            <marquee BEHAVIOR="alternate" direction="up" HEIGHT=600 scrollamount="4" onmouseover="this.stop();"
-                     onmouseout="this.start();">
-                {% for company in companies %}
-                <br>
-                <img class="d-block w-100" src="{% static company %}">
-                {% endfor %}
-                <br>
-            </marquee>
-        </div>
-        {% endif %}--->
 
 
         {% endblock %}
