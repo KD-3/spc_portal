@@ -41,8 +41,10 @@ class StudentProfile(models.Model):
     xii_year = models.SmallIntegerField()
     xii_board_name = models.CharField(max_length=100)
     xii_percentage = models.CharField(max_length=10)
+    std_image = models.ImageField(upload_to='student-image', null=False, blank=False, default='image')
     banned = models.BooleanField(default=False)
     placed = models.BooleanField(default=False)
+
 
     def __str__(self):
         return self.user.get_full_name()
@@ -67,7 +69,7 @@ class CompanyProfile(models.Model):
                                         through_fields=('company', 'student'), related_name='joboffers')
     internship_offers = models.ManyToManyField(StudentProfile, through='company.InternshipOffer',
                                                through_fields=('company', 'student'), related_name='internshipoffers')
-    contact = models.CharField(max_length=20)
+    contact = models.CharField(max_length=20, default='0')
 
     def __str__(self):
         return self.name

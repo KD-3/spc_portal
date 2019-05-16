@@ -47,10 +47,11 @@ class StudentRegisterForm(UserCreationForm):
     xii_year = forms.IntegerField(max_value=2050, min_value=1980)
     xii_board_name = forms.CharField(max_length=100)
     xii_percentage = forms.CharField(max_length=16)
+    std_image = forms.ImageField()
 
     class Meta:
         model = User
-        fields = ['username', 'first_name', 'last_name', 'password1', 'password2', 'email']
+        fields = ['username', 'first_name', 'last_name', 'password1', 'password2', 'email', 'std_image']
 
 
 class CompanyRegisterForm(UserCreationForm):

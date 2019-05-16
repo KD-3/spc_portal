@@ -54,7 +54,8 @@ class StudentRegisterFormView(CreateView):
                                                     x_percentage=kwargs['x_percentage'],
                                                     xii_year=kwargs['xii_year'],
                                                     xii_board_name=kwargs['xii_board_name'],
-                                                    xii_percentage=kwargs['xii_percentage'], )
+                                                    xii_percentage=kwargs['xii_percentage'],
+                                                    std_image=kwargs['std_image'], )
         userprofile.save()
 
 
