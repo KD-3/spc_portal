@@ -49,7 +49,7 @@ def mark_placed(modeladmin, request, queryset):
 class StudentProfileAdmin(ImportExportActionModelAdmin):
     resource_class = StudentProfileResource
     inlines = (ResumeInline,)
-    list_display = ['__str__', 'roll_no', 'program_branch', 'year']
+    list_display = ['__str__', 'roll_no', 'program_branch', 'year', 'std_image']
     list_filter = ['program_branch', 'year']
     ordering = ['roll_no', ]
     search_fields = ['roll_no', 'user__first_name', 'user__last_name']

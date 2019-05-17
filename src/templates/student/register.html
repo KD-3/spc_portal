@@ -11,8 +11,9 @@
                     <div class="red-text">
                         {{ form.non_field_errors }}
                         {% for field in form %}
-                            {% if field.errors %}
-                                <li>{{ field.label }}: {{ field.errors|striptags }}</li>{% endif %}
+                        {% if field.errors %}
+                        <li>{{ field.label }}: {{ field.errors|striptags }}</li>
+                        {% endif %}
                         {% endfor %}
                     </div>
                     <div class="row">
@@ -125,9 +126,9 @@
                                 <br>
                                 <div class="md-form">
                                     <i class="fa fa-birthday-cake prefix" style="color: cornflowerblue"></i>
-                                    {#                            <label for="id_dob">Dob:</label>#}
+                                    {# <label for="id_dob">Dob:</label>#}
                                     <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date of birth:</span>
-                                    {#                            {{ form.dob }}#}
+                                    {# {{ form.dob }}#}
                                     <input type="date" name="dob" id="id_dob" required/>
                                 </div>
                                 <br>
@@ -221,6 +222,7 @@
                                     <label for="id_std_image" style="font-size: medium">Upload Image:</label>
                                     <input type="file" name="std_image"
                                            required id="id_std_image"/>
+                                    
                                 </div>
                                 <br>
 
@@ -318,33 +320,32 @@
         </div>
 
     </div>
-    </div>
-    </div>
-    <div class="col-lg-1"></div>
+</div>
+</div>
+<div class="col-lg-1"></div>
 
 
-    </div>
-    <script type="text/javascript">
-        /*function terms() {
-            var tnc = document.getElementById("tnc");
-            var register_form = document.getElementById("register_form");
-            if(tnc.style.display === "none"){
-                tnc.style.display = "block";
-                register_form.style.display = "none";
-            }
-            else{
-                tnc.style.display = "none";
-                register_form.style.display = "block";
-            }
-        }*/
-        function show() {
-            var condition = document.getElementById("agree");
-            if (condition.checked) {
-                document.getElementById("register").style.display = "block";
-            }
-            else {
-                document.getElementById("register").style.display = "none";
-            }
+</div>
+<script type="text/javascript">
+    /*function terms() {
+        var tnc = document.getElementById("tnc");
+        var register_form = document.getElementById("register_form");
+        if(tnc.style.display === "none"){
+            tnc.style.display = "block";
+            register_form.style.display = "none";
         }
-    </script>
+        else{
+            tnc.style.display = "none";
+            register_form.style.display = "block";
+        }
+    }*/
+    function show() {
+        var condition = document.getElementById("agree");
+        if (condition.checked) {
+            document.getElementById("register").style.display = "block";
+        } else {
+            document.getElementById("register").style.display = "none";
+        }
+    }
+</script>
 {% endblock %}
